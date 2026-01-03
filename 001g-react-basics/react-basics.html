@@ -6,20 +6,18 @@
   <body>
     <div class="js-container"></div>
 
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const socksTotalPrice = 10;
-      const tShirtTotalPrice = 2 * 8;
-      const productCost = socksTotalPrice + tShirtTotalPrice;
-      console.log(productCost);
-
-      const productCostParagraph = <p>Product cost: ${productCost}</p>;
+      const todayText = dayjs().format('MMMM D');
+      console.log(todayText);
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(productCostParagraph);
+      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
     </script>
   </body>
 </html>

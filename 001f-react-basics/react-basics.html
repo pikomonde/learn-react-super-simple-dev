@@ -14,12 +14,19 @@
       const socksTotalPrice = 10;
       const tShirtTotalPrice = 2 * 8;
       const productCost = socksTotalPrice + tShirtTotalPrice;
-      console.log(productCost);
+      const shippingCost = 5;
 
-      const productCostParagraph = <p>Product cost: ${productCost}</p>;
+      const paragraph = (
+        <div>
+          <p>Product cost: ${productCost}</p>
+          <p>Shipping cost: ${shippingCost}</p>
+          <p>Total cost: ${productCost + shippingCost}</p>
+          <button>Place your order</button>
+        </div>
+      );
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(productCostParagraph);
+      ReactDOM.createRoot(container).render(paragraph);
     </script>
   </body>
 </html>
