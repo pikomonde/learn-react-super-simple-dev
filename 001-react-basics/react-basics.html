@@ -11,8 +11,18 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+      const helloButton = <button>Hello from React!</button>;
+      const paragraph = <p>This is a paragrpah. Lorem Ipsum</p>;
+
+      const div = (
+        <div>
+          <button>Hello from React!</button>
+          <p>This is a paragrpah. Lorem Ipsum</p>
+        </div>
+      );
+
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+      ReactDOM.createRoot(container).render(div);
     </script>
   </body>
 </html>
