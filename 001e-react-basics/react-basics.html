@@ -11,19 +11,15 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const helloButton = <button>Hello from React!</button>;
-      const paragraph = <p>This is a paragrpah. Lorem Ipsum</p>;
+      const socksTotalPrice = 10;
+      const tShirtTotalPrice = 2 * 8;
+      const productCost = socksTotalPrice + tShirtTotalPrice;
+      console.log(productCost);
 
-      const div = (
-        <div>
-          <button>Hello from React!</button>
-          <p>This is a paragrpah. Lorem Ipsum</p>
-          <p>My age is {20+15} years old</p>
-        </div>
-      );
+      const productCostParagraph = <p>Product cost: ${productCost}</p>
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+      ReactDOM.createRoot(container).render(productCostParagraph);
     </script>
   </body>
 </html>
